@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <!-- SIDE BAR-->
-     <div class="topbar"></div>
-     <div class="title-bussiness"></div>
-     <div class="btn-menu"></div>
+    <div class="topbar"></div>
+      <div class="title-bussiness">
+        <span>Agua_SAC</span>
      </div>
-    <p> Dashboard </p>
+     <div class="btn-menu">
+         <button class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+         </button>
+      </div>
+     </div>
+     <!--overlay junto con rl navbar-->
+     <div class+="overlay"></div>
+     <!--sidebar : es el menu / la barra lateral IZQ..-->
+     <aside class="sidebar">
+        <div class="sidebar_logp">Dashboard</div>
+        <ul>
+            <li>
+                <a href="#" class="activo" id="activo">
+                    <I class="fa-solid fa-house"></I>
+                    <span>inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"> 
+                    <I class="fa-solid fa-folder-open"></I>
+                    <spam>Reportes</spam>
+                </a>
+            </li>
+        </ul>
+     </aside>
 </body>
 </html>
