@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agua SAC | Sistema de Gestión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="wrapper">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>💧 Agua SAC</h3>
+            </div>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="javascript:void(0)" onclick="mostrarSeccion('tabla')" class="menu-link activo">
+                        <i class="fas fa-users"></i> Lista de Clientes
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" onclick="mostrarSeccion('formulario')" class="menu-link">
+                        <i class="fas fa-user-plus"></i> Añadir Cliente
+                    </a>
+                </li>
+                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
+                <li>
+                    <a href="#" id="btn-logout">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <header class="main-header">
+                <button class="hamburger" id="btn-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-info">
+                    <h1>Gestion_Agua_Sac</h1>
+                    <p id="breadcrumb">Panel > Lista de Clientes</p>
+                </div>
+            </header>
+
+            <main class="container">
+                <section id="vista-tabla" class="card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-list"></i> Clientes de Pucallpa</h2>
+                        <button class="btn-refresh" onclick="obtenerClientes()">
+                            <i class="fas fa-sync-alt"></i> Actualizar
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>DNI</th>
+                                    <th>Dirección</th>
+                                    <th>Medidor</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lista-clientes">
+                                </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="vista-formulario" class="card" style="display: none;">
+                    <div class="card-header">
+                        <h2><i class="fas fa-user-plus"></i> Nuevo Registro</h2>
+                    </div>
+                    <form id="form-cliente">
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Nombre Completo</label>
+                                <input type="text" id="nombreCompleto" placeholder="Ej. Aniebell Garcia" required>
+                            </div>
+                            <div class="input-group">
+                                <label>DNI</label>
+                                <input type="text" id="dni" maxlength="8" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Dirección</label>
+                                <input type="text" id="direccion" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Medidor</label>
+                                <select id="estadoMedidor">
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Malogrado">Malogrado</option>
+                                    <option value="Sin_Medidor">Sin Medidor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-save">Guardar Cliente</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/siderbar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    color: #333;
+}
+
+/* Tarjetas Blancas (Cards) */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* Títulos */
+h1 { font-weight: 700; color: #1a1c23; margin-bottom: 5px; }
+h2 { font-size: 1.2rem; font-weight: 600; color: #0077b6; display: flex; align-items: center; gap: 10px; }
+
+/* Botones Modernos */
+.btn-save {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-save:hover { background: #005f8d; transform: translateY(-2px); }
+
+.btn-refresh {
+    background: #e9ecef;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Tabla Estilizada */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 15px;
+    background: #f8f9fa;
+    color: #2a4964;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.data-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.data-table tr:hover { background-color: #f1f8ff; }
+/* Para que los botones se vean exactamente como en tu foto de WhatsApp */
+.btn-outline-primary, .btn-outline-danger {
+    font-weight: 500;
+    font-size: 14px;
+    background-color: white; /* Fondo blanco como en la imagen */
+}
+
+/* Efecto hover para que cambien de color suavemente */
+.btn-outline-primary:hover {
+    background-color: #6f42c1;
+    color: white !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Ajuste para que la columna de opciones tenga espacio */
+th {
+    background-color: #1a1a1a; /* El color oscuro de la cabecera en tu foto */
+    color: white;
+}
+/* Asegurar que el formulario no se amontone */
+#vista-formulario .row {
+    margin: 0 !important; /* Quita márgenes extraños */
+}
+
+#vista-formulario .form-control,
+#vista-formulario .form-select {
+    padding: 10px 15px !important; /* Dale aire a los textos */
+    border-radius: 8px !important;
+}
+
+#vista-formulario label {
+    margin-bottom: 8px !important;
+    display: block !important;
+}

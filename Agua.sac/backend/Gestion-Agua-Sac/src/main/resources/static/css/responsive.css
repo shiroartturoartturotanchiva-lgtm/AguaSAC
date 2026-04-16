@@ -1,0 +1,46 @@
+.sidebar {
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    background: #303033;
+    color: #dfd6d6;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 30px 20px;
+    text-align: center;
+    background: #14161b;
+}
+
+.sidebar ul { list-style: none; padding: 20px; }
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #8a8d93;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a.activo, .sidebar ul li a:hover {
+    background: #0077b6;
+    color: white;
+}
+
+#content {
+    margin-left: 260px; /* Esto empuja el contenido para que no lo tape el menú */
+    padding: 40px;
+    transition: 0.3s;
+}
+
+/* Si es móvil, el margen desaparece */
+@media (max-width: 768px) {
+    #content { margin-left: 0; padding: 20px; }
+    .sidebar { left: -260px; }
+    .sidebar.open { left: 0; }
+}
