@@ -62,6 +62,14 @@ Gestion_Agua_Sac/
     └── 📄 script_bd.sql     → Script de creación de la base de datos.
 `````
 
+## 📐 Diagrama Entidad-Relación (DER)
+
+<img width="1264" height="847" alt="Gemini_Generated_Image_adolhjadolhjadol" src="https://github.com/user-attachments/assets/e291261b-8b54-4748-8539-c8c3dbe4aa01" />
+
+
+## 📊 Modelo Relacional (MR)
+
+<img width="1408" height="768" alt="Gemini_Generated_Image_yfenizyfenizyfen" src="https://github.com/user-attachments/assets/08af978d-c285-475a-beb6-7c4e3b79df87" />
 
 ---
 
@@ -78,7 +86,7 @@ El sistema cuenta con **4 tablas principales** diseñadas estratégicamente para
 
 ---
 
-![Banner de Gestion Agua SAC](blob:null/5d229dac-643e-4741-9b2c-b10be95bc966)
+(
 
 ## 📊 Modelo Relacional y Cardinalidades
 
@@ -145,3 +153,46 @@ CREATE TABLE cobros (
     FOREIGN KEY (recibo_id) REFERENCES recibos(id) ON DELETE CASCADE,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
+```
+
+## 🚀 Guía de Instalación y Ejecución
+
+Para poner en marcha el sistema **Gestion_Agua_Sac**, sigue los pasos a continuación:
+
+### 📋 Requisitos Previos
+* **JDK 21** o superior instalado.
+* **IntelliJ IDEA** (recomendado para el Backend).
+* **VS Code** (recomendado para el Frontend).
+* **XAMPP** (para el servicio de MySQL).
+* **MySQL Workbench** (para la gestión de la base de datos).
+
+---
+
+### 🗄️ Configuración de la Base de Datos
+1. Inicia **XAMPP** y activa el módulo **MySQL**.
+2. Abre **MySQL Workbench** y crea la base de datos ejecutando el script SQL proporcionado en la sección anterior.
+3. Asegúrate de que el nombre de la base de datos sea `Gestion_Agua_Sac`.
+
+---
+
+### ⚙️ Backend (Spring Boot)
+1. Abre la carpeta `backend/` en **IntelliJ IDEA**.
+2. Localiza el archivo `src/main/resources/application.properties`.
+3. Configura las credenciales de tu base de datos local:
+
+```properties
+spring.application.name=gestion_agua_sac
+
+# CONEXION A MYSQL
+spring.datasource.url=jdbc:mysql://localhost:3306/Gestion_Agua_Sac
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA / HIBERNATE
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+# Puerto del servidor
+server.port=8080
