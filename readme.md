@@ -22,7 +22,7 @@
 
 ---
 
-## ⚙️ Requerimientos Funcionales (RF)
+## ⚙️ Requerimientos Funcionales
 
 | Código | Descripción |
 | :--- | :--- |
