@@ -1,6 +1,6 @@
 # 💧 Sistema de Gestión de Recibos y Cobranzas - Gestion_Agua_Sac
 
-> **Proyecto Final:** Curso de Java Web - SENATI.  
+> **Proyecto:** Curso de Java Web - SENATI.  
 > Sistema web integral para la administración de consumo de agua, facturación mensual y control de estados de medidores.
 
 ---
