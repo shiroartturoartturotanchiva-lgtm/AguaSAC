@@ -60,7 +60,25 @@ Gestion_Agua_Sac/
 │   └── 📁 templates/        → Vistas (UI) del sistema.
 └── 📁 sql/
     └── 📄 script_bd.sql     → Script de creación de la base de datos.
-```:
+`````
+
+
+---
+
+## 🗄️ Base de Datos
+
+El sistema cuenta con **4 tablas principales** diseñadas estratégicamente para garantizar la integridad y trazabilidad de la información:
+
+| Tabla | 📝 Descripción |
+| :--- | :--- |
+| **`USUARIOS`** | Personal administrativo con acceso al sistema, encargados de gestionar perfiles y registrar los cobros de los recibos. |
+| **`CLIENTES`** | Registro central de abonados; almacena datos de contacto, dirección y el **estado técnico del medidor**. |
+| **`RECIBOS`** | Detalle de la facturación mensual que incluye el consumo de agua registrado y los montos calculados automáticamente. |
+| **`COBROS`** | Historial financiero donde se valida y almacena el pago efectivo de cada recibo emitido por la empresa. |
+
+---
+
+![Banner de Gestion Agua SAC](blob:null/5d229dac-643e-4741-9b2c-b10be95bc966)
 
 ## 📊 Modelo Relacional y Cardinalidades
 
