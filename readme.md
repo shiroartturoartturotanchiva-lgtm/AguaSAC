@@ -60,14 +60,7 @@ Gestion_Agua_Sac/
 │   └── 📁 templates/        → Vistas (UI) del sistema.
 └── 📁 sql/
     └── 📄 script_bd.sql     → Script de creación de la base de datos.
-
-
-# 💧 Sistema de Gestión de Recibos y Cobranzas - Gestion_Agua_Sac
-
-> **Proyecto Final:** Desarrollo de Aplicaciones Web - SENATI.  
-> Aplicación integral para la administración de consumo de agua, facturación y control de pagos en la ciudad de Pucallpa.
-
----
+```:
 
 ## 📊 Modelo Relacional y Cardinalidades
 
