@@ -40,7 +40,7 @@
 * **Frontend:** HTML5, CSS3, JavaScript, Thymeleaf.
 * **Base de Datos:** MySQL 8 (Gestionada con MySQL Workbench).
 * **Herramientas:** * **Gestión:** Trello (Kanban).
-    * **Diseño:** Figma & Draw.io.
+    * **Diseño:** Figma & Gimini.
     * **Entorno:** IntelliJ IDEA & XAMPP (Tomcat/MySQL).
 
 ---
