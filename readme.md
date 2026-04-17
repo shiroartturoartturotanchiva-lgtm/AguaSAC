@@ -152,6 +152,33 @@ CREATE TABLE cobros (
     monto_recibido DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (recibo_id) REFERENCES recibos(id) ON DELETE CASCADE,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+
+-- Insertar Clientes
+INSERT INTO clientes (nombre_completo, dni, direccion, referencia, celular, fecha_registro, tipo_de_uso, estado_medidor) VALUES  
+('Aniebell Garcia', '72145566', 'Jr. Ucayali 123', 'Frente al parque', '900111222', '2024-01-15', 'Casa Familiar', 'Bueno'),
+('Ricardo Huaman', '10458899', 'Jr. Constitución 490', 'Cerca al mercado', '900333444', '2024-02-10', 'Negocio', 'Malogrado'),
+('Patricia Castro', '40552211', 'AA.HH. Las Moras Mz. C', 'Portón verde', '900555666', '2024-03-05', 'Casa Familiar', 'Bueno'),
+('Juan Perez', '09887766', 'Av. Centenario 456', 'Costado farmacia', '900777888', '2024-03-20', 'Industrial', 'Sin Medidor'),
+('Sofia Ramos', '44332211', 'Urb. Los Portales Mz. F', 'Esquina semáforo', '900999000', '2024-04-01', 'Casa Familiar', 'Bueno'),
+('Fernando Vargas', '12345678', 'Jr. Progreso 334', 'Detrás iglesia', '900123456', '2024-04-12', 'Negocio', 'Bueno');
+
+-- Insertar Usuarios
+INSERT INTO usuarios (nombre_usuario, clave, rol) VALUES 
+('admin', 'admin123', 'ADMIN'),
+('cobrador_pucallpa', 'pucallpa123', 'COBRADOR');
+
+-- Insertar Recibos
+INSERT INTO recibos (cliente_id, mes_cobrado, cantidad_agua_usada, monto_total, ya_pago) VALUES  
+(1, 'Abril', 15, 35.00, 'NO'),
+(2, 'Abril', 10, 50.00, 'SI'),
+(3, 'Abril', 12, 25.00, 'NO'),
+(4, 'Abril', 20, 45.00, 'SI'),
+(5, 'Abril', 08, 15.00, 'SI'),
+(6, 'Abril', 25, 60.00, 'NO');
+
+-- Registrar un cobro de prueba
+INSERT INTO cobros (recibo_id, usuario_id, medio_pago, monto_recibido) VALUES (2, 2, 'Efectivo', 50.00);
+
 );
 ```
 
