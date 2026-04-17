@@ -1,4 +1,4 @@
-<img width="1408" height="768" alt="Gemini_Generated_Image_yfenizyfenizyfen" src="https://github.com/user-attachments/assets/0bf77bc0-5112-443a-899c-cb5e072d3ad2" /># 💧 Sistema de Gestión de Recibos y Cobranzas - Gestion_Agua_Sac
+# 💧 Sistema de Gestión de Recibos y Cobranzas - Gestion_Agua_Sac
 
 > **Proyecto Final:** Curso de Java Web - SENATI.  
 > Sistema web integral para la administración de consumo de agua, facturación mensual y control de estados de medidores.
